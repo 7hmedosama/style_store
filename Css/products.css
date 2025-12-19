@@ -1,20 +1,66 @@
 /* ===== Categories ===== */
 .categories {
     padding: 80px 0 40px;
+    overflow: hidden;
+}
+
+.categories-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    /* Gradient mask for smooth fade-in/out */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .categories-grid {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 30px;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+    padding: 10px;
+}
+
+.categories-grid:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 15px));
+        /* -50% because we will clone the content */
+    }
+}
+
+/* Ensure animation works for RTL by reversing direction or adjusting values */
+[dir="rtl"] .categories-grid {
+    animation: marquee-rtl 20s linear infinite;
+}
+
+@keyframes marquee-rtl {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(50% + 15px));
+    }
 }
 
 .category-card {
+    flex: 0 0 200px;
+    /* Fixed width for consistent animation */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     padding: 25px 35px;
     background: var(--bg-card);
     border-radius: var(--radius);

@@ -29,10 +29,23 @@ function renderProducts() {
     productsGrid.innerHTML = filteredProducts.map(product => createProductCardHTML(product)).join('');
 }
 
+// Clone categories for infinite scroll
+function initCategoryMarquee() {
+    const grid = document.getElementById('categoriesGrid');
+    if (!grid) return;
+
+    // Clone all children
+    const cards = Array.from(grid.children);
+    cards.forEach(card => {
+        const clone = card.cloneNode(true);
+        grid.appendChild(clone);
+    });
+}
+
 // Event Listeners
 function initEventListeners() {
     const searchInput = document.getElementById('searchInput');
-    const categoryCards = document.querySelectorAll('.category-card');
+    const categoriesContainer = document.getElementById('categoriesGrid');
 
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
@@ -41,14 +54,30 @@ function initEventListeners() {
         });
     }
 
-    categoryCards.forEach(card => {
-        card.addEventListener('click', () => {
-            categoryCards.forEach(c => c.classList.remove('active'));
-            card.classList.add('active');
-            currentCategory = card.dataset.category;
+    if (categoriesContainer) {
+        // Use event delegation for categories
+        categoriesContainer.addEventListener('click', (e) => {
+            const card = e.target.closest('.category-card');
+            if (!card) return;
+
+            const categoryCards = document.querySelectorAll('.category-card');
+            const category = card.dataset.category;
+
+            // Update all cards with same category (both original and clones)
+            categoryCards.forEach(c => {
+                if (c.dataset.category === category) {
+                    c.classList.add('active');
+                } else {
+                    c.classList.remove('active');
+                }
+            });
+
+            currentCategory = category;
             renderProducts();
         });
-    });
+    }
+
+    initCategoryMarquee();
 }
 
 // Note: App initialization is now handled by components.js after all components are loaded
