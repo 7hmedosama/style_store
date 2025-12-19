@@ -1,12 +1,10 @@
-/* ===== Style Store - Main CSS ===== */
-/* All styles are organized in separate files */
-
-@import url('css/base.css');
-@import url('css/header.css');
-@import url('css/hero.css');
-@import url('css/products.css');
-@import url('css/sections.css');
-@import url('css/cart.css');
-@import url('css/modal.css');
-@import url('css/favorites.css');
-@import url('css/responsive.css');
+@import url('Css/variables.css');
+@import url('Css/base.css');
+@import url('Css/header.css');
+@import url('Css/hero.css');
+@import url('Css/products.css');
+@import url('Css/sections.css');
+@import url('Css/cart.css');
+@import url('Css/modal.css');
+@import url('Css/favorites.css');
+@import url('Css/responsive.css');

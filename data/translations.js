@@ -47,6 +47,9 @@ const translations = {
         "no-favorites-desc": "لم تقم بإضافة أي منتجات لقائمة المفضلة بعد",
         "browse-btn": "تصفح المنتجات",
         "select-lang": "اختر اللغة",
+        "select-theme": "اختر الوضع",
+        "theme-light": "الوضع الفاتح",
+        "theme-dark": "الوضع الليلي",
 
         // Language Switcher
         "lang-name": "English",
@@ -99,6 +102,9 @@ const translations = {
         "no-favorites-desc": "You haven't added any products to your wishlist yet",
         "browse-btn": "Browse Products",
         "select-lang": "Select Language",
+        "select-theme": "Select Mode",
+        "theme-light": "Light Mode",
+        "theme-dark": "Dark Mode",
 
         // Language Switcher
         "lang-name": "العربية",

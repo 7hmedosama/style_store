@@ -35,7 +35,7 @@
 .hero-btn {
     display: inline-block;
     padding: 18px 50px;
-    background: linear-gradient(135deg, var(--secondary), #f97316);
+    background: linear-gradient(135deg, var(--accent-600), #f97316);
     color: white;
     font-size: 1.1rem;
     font-weight: 700;

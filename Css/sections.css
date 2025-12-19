@@ -43,7 +43,7 @@
 /* ===== About ===== */
 .about {
     padding: 100px 0;
-    background: white;
+    background: var(--bg-main);
 }
 
 .about-content {
@@ -54,7 +54,7 @@
 
 .about-content p {
     font-size: 1.1rem;
-    color: var(--gray);
+    color: var(--text-secondary);
     line-height: 1.8;
 }
 

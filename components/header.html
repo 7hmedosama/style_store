@@ -13,6 +13,25 @@
         </nav>
 
         <div class="header-actions">
+            <!-- Theme Dropdown -->
+            <div class="theme-dropdown" id="themeDropdown">
+                <button onclick="toggleThemeDropdown()" class="theme-btn" id="themeSwitcherBtn">
+                    <span class="theme-icon">🌙</span>
+                    <span class="theme-label" data-i18n="select-theme">اختر الوضع</span>
+                    <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="dropdown-menu" id="themeMenu">
+                    <div class="dropdown-item" onclick="setTheme('light')">
+                        <span class="theme-menu-icon">☀️</span>
+                        <span data-i18n="theme-light">الوضع الفاتح</span>
+                    </div>
+                    <div class="dropdown-item" onclick="setTheme('dark')">
+                        <span class="theme-menu-icon">🌙</span>
+                        <span data-i18n="theme-dark">الوضع الليلي</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Language Dropdown -->
             <div class="lang-dropdown" id="langDropdown">
                 <button onclick="toggleLangDropdown()" class="lang-btn" id="langSwitcherBtn">

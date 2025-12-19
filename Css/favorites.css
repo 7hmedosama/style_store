@@ -2,7 +2,7 @@
 .favorites-page {
     min-height: 100vh;
     padding: 120px 0 80px;
-    background: var(--light);
+    background: var(--bg-main);
 }
 
 .favorites-header {
@@ -14,7 +14,7 @@
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 15px;
-    background: linear-gradient(135deg, #ef4444, #dc2626);
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -22,16 +22,17 @@
 
 .page-subtitle {
     font-size: 1.1rem;
-    color: var(--gray);
+    color: var(--text-secondary);
 }
 
 .no-favorites {
     grid-column: 1 / -1;
     text-align: center;
     padding: 100px 20px;
-    background: white;
+    background: var(--bg-card);
     border-radius: var(--radius);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--primary-100);
 }
 
 .empty-icon {
@@ -57,28 +58,28 @@
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 15px;
-    color: var(--dark);
+    color: var(--primary-900);
 }
 
 .no-favorites p {
     font-size: 1.1rem;
-    color: var(--gray);
+    color: var(--text-secondary);
     margin-bottom: 30px;
 }
 
 .back-btn {
     display: inline-block;
     padding: 15px 40px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    background: linear-gradient(135deg, var(--accent-600), #f97316);
     color: white;
     font-size: 1rem;
     font-weight: 700;
     border-radius: 50px;
     transition: var(--transition);
-    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
 }
 
 .back-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 15px 40px rgba(245, 158, 11, 0.4);
 }
