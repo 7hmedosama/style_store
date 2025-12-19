@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="متجر إلكتروني عصري - تسوق أفضل المنتجات بأسعار مميزة">
+    <title>متجر ستايل | Style Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <div id="mainContent">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="hero-title">اكتشف أحدث صيحات الموضة</h1>
+                <p class="hero-subtitle">تسوق الآن واحصل على خصم 30% على طلبك الأول</p>
+                <a href="#products" class="hero-btn">تسوق الآن</a>
+            </div>
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories" id="categories">
+            <div class="container">
+                <h2 class="section-title">تصفح التصنيفات</h2>
+                <div class="categories-grid">
+                    <button class="category-card active" data-category="all">
+                        <span class="category-icon">🏷️</span>
+                        <span class="category-name">الكل</span>
+                    </button>
+                    <button class="category-card" data-category="electronics">
+                        <span class="category-icon">📱</span>
+                        <span class="category-name">إلكترونيات</span>
+                    </button>
+                    <button class="category-card" data-category="fashion">
+                        <span class="category-icon">👕</span>
+                        <span class="category-name">ملابس</span>
+                    </button>
+                    <button class="category-card" data-category="accessories">
+                        <span class="category-icon">⌚</span>
+                        <span class="category-name">إكسسوارات</span>
+                    </button>
+                    <button class="category-card" data-category="shoes">
+                        <span class="category-icon">👟</span>
+                        <span class="category-name">أحذية</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products" id="products">
+            <div class="container">
+                <h2 class="section-title">منتجاتنا المميزة</h2>
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">🚚</span>
+                        <h3>شحن مجاني</h3>
+                        <p>للطلبات فوق 200 جنيه</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">💳</span>
+                        <h3>دفع آمن</h3>
+                        <p>100% حماية لبياناتك</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🔄</span>
+                        <h3>إرجاع سهل</h3>
+                        <p>خلال 30 يوم</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🎧</span>
+                        <h3>دعم 24/7</h3>
+                        <p>خدمة عملاء متميزة</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <h2 class="section-title">من نحن</h2>
+                    <p>متجر ستايل هو وجهتك الأولى للتسوق الإلكتروني في المنطقة. نقدم لك أفضل المنتجات بأعلى جودة وأفضل
+                        الأسعار. نحرص على رضا عملائنا ونسعى دائماً لتقديم تجربة تسوق مميزة.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Favorites Section (Component) -->
+    <div id="favorites-placeholder"></div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Cart -->
+    <div id="cart-placeholder"></div>
+
+    <!-- Modal -->
+    <div id="modal-placeholder"></div>
+
+    <!-- Toast -->
+    <div id="toast-placeholder"></div>
+
+    <!-- JavaScript Files -->
+    <script src="utils/components.js"></script>
+    <script src="data/products.js"></script>
+    <script src="utils/storage.js"></script>
+    <script src="utils/ui.js"></script>
+    <script src="utils/cart.js"></script>
+    <script src="utils/modal.js"></script>
+    <script src="utils/favorites.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

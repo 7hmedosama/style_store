@@ -1,0 +1,32 @@
+<header class="header">
+    <div class="container">
+        <a href="#" onclick="showHome(); return false;" class="logo">
+            <span class="logo-icon">🛍️</span>
+            <span class="logo-text">ستايل</span>
+        </a>
+
+        <nav class="nav">
+            <a href="#home" onclick="showHome()" class="nav-link active">الرئيسية</a>
+            <a href="#products" onclick="showHome()" class="nav-link">المنتجات</a>
+            <a href="#categories" onclick="showHome()" class="nav-link">التصنيفات</a>
+            <a href="#about" onclick="showHome()" class="nav-link">من نحن</a>
+        </nav>
+
+        <div class="header-actions">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="ابحث عن منتج...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <a href="#" onclick="showFavorites(); return false;" class="wishlist-btn" id="wishlistBtn">
+                <span class="wishlist-icon">❤️</span>
+                <span class="wishlist-count" id="wishlistCount">0</span>
+            </a>
+            <button class="cart-btn" id="cartBtn">
+                <span class="cart-icon">🛒</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </div>
+</header>
