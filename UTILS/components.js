@@ -1,30 +1,19 @@
 // ===== Load HTML Components =====
 
-// Track loaded components
-let componentsLoaded = 0;
-const totalComponents = 6;
-
 function loadComponent(elementId, file) {
     return fetch(file)
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            return response.text();
+        })
         .then(html => {
             const element = document.getElementById(elementId);
             if (element) {
                 element.outerHTML = html;
             }
-            componentsLoaded++;
-
-            // When all components are loaded, initialize the app
-            if (componentsLoaded === totalComponents) {
-                initializeApp();
-            }
         })
         .catch(err => {
             console.warn('Component load failed:', file, err);
-            componentsLoaded++;
-            if (componentsLoaded === totalComponents) {
-                initializeApp();
-            }
         });
 }
 
@@ -42,10 +31,17 @@ function initializeApp() {
 
 // Load all components when DOM is ready
 document.addEventListener('DOMContentLoaded', function () {
-    loadComponent('header-placeholder', 'components/header.html');
-    loadComponent('footer-placeholder', 'components/footer.html');
-    loadComponent('cart-placeholder', 'components/cart.html');
-    loadComponent('modal-placeholder', 'components/modal.html');
-    loadComponent('toast-placeholder', 'components/toast.html');
-    loadComponent('favorites-placeholder', 'components/favorites.html');
+    const components = [
+        { id: 'header-placeholder', file: 'components/header.html' },
+        { id: 'footer-placeholder', file: 'components/footer.html' },
+        { id: 'cart-placeholder', file: 'components/cart.html' },
+        { id: 'modal-placeholder', file: 'components/modal.html' },
+        { id: 'toast-placeholder', file: 'components/toast.html' },
+        { id: 'favorites-placeholder', file: 'components/favorites.html' }
+    ];
+
+    Promise.all(components.map(c => loadComponent(c.id, c.file)))
+        .finally(() => {
+            initializeApp();
+        });
 });
