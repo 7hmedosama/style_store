@@ -2,19 +2,36 @@
     <div class="container">
         <a href="#" onclick="showHome(); return false;" class="logo">
             <span class="logo-icon">🛍️</span>
-            <span class="logo-text">ستايل</span>
+            <span class="logo-text" data-i18n="logo-text">ستايل</span>
         </a>
 
         <nav class="nav">
-            <a href="#home" onclick="showHome()" class="nav-link active">الرئيسية</a>
-            <a href="#products" onclick="showHome()" class="nav-link">المنتجات</a>
-            <a href="#categories" onclick="showHome()" class="nav-link">التصنيفات</a>
-            <a href="#about" onclick="showHome()" class="nav-link">من نحن</a>
+            <a href="#home" onclick="showHome()" class="nav-link active" data-i18n="nav-home">الرئيسية</a>
+            <a href="#products" onclick="showHome()" class="nav-link" data-i18n="nav-products">المنتجات</a>
+            <a href="#categories" onclick="showHome()" class="nav-link" data-i18n="nav-categories">التصنيفات</a>
+            <a href="#about" onclick="showHome()" class="nav-link" data-i18n="nav-about">من نحن</a>
         </nav>
 
         <div class="header-actions">
+            <!-- Language Dropdown -->
+            <div class="lang-dropdown" id="langDropdown">
+                <button onclick="toggleLangDropdown()" class="lang-btn" id="langSwitcherBtn">
+                    <span class="lang-icon">🌐</span>
+                    <span class="lang-label" data-i18n="select-lang">اختر اللغة</span>
+                    <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="dropdown-menu" id="langMenu">
+                    <div class="dropdown-item" onclick="setLanguage('ar')">
+                        <span class="flag">🇪🇬</span> العربية
+                    </div>
+                    <div class="dropdown-item" onclick="setLanguage('en')">
+                        <span class="flag">🇺🇸</span> English
+                    </div>
+                </div>
+            </div>
+
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="ابحث عن منتج...">
+                <input type="text" id="searchInput" placeholder="ابحث عن منتج..." data-i18n="search-placeholder">
                 <button class="search-btn">🔍</button>
             </div>
             <a href="#" onclick="showFavorites(); return false;" class="wishlist-btn" id="wishlistBtn">

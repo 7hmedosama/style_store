@@ -19,9 +19,9 @@
         <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="hero-content">
-                <h1 class="hero-title">اكتشف أحدث صيحات الموضة</h1>
-                <p class="hero-subtitle">تسوق الآن واحصل على خصم 30% على طلبك الأول</p>
-                <a href="#products" class="hero-btn">تسوق الآن</a>
+                <h1 class="hero-title" data-i18n="hero-title">اكتشف أحدث صيحات الموضة</h1>
+                <p class="hero-subtitle" data-i18n="hero-subtitle">تسوق الآن واحصل على خصم 30% على طلبك الأول</p>
+                <a href="#products" class="hero-btn" data-i18n="hero-btn">تسوق الآن</a>
             </div>
             <div class="hero-shapes">
                 <div class="shape shape-1"></div>
@@ -33,27 +33,27 @@
         <!-- Categories Section -->
         <section class="categories" id="categories">
             <div class="container">
-                <h2 class="section-title">تصفح التصنيفات</h2>
+                <h2 class="section-title" data-i18n="section-categories">تصفح التصنيفات</h2>
                 <div class="categories-grid">
                     <button class="category-card active" data-category="all">
                         <span class="category-icon">🏷️</span>
-                        <span class="category-name">الكل</span>
+                        <span class="category-name" data-i18n="cat-all">الكل</span>
                     </button>
                     <button class="category-card" data-category="electronics">
                         <span class="category-icon">📱</span>
-                        <span class="category-name">إلكترونيات</span>
+                        <span class="category-name" data-i18n="cat-electronics">إلكترونيات</span>
                     </button>
                     <button class="category-card" data-category="fashion">
                         <span class="category-icon">👕</span>
-                        <span class="category-name">ملابس</span>
+                        <span class="category-name" data-i18n="cat-fashion">ملابس</span>
                     </button>
                     <button class="category-card" data-category="accessories">
                         <span class="category-icon">⌚</span>
-                        <span class="category-name">إكسسوارات</span>
+                        <span class="category-name" data-i18n="cat-accessories">إكسسوارات</span>
                     </button>
                     <button class="category-card" data-category="shoes">
                         <span class="category-icon">👟</span>
-                        <span class="category-name">أحذية</span>
+                        <span class="category-name" data-i18n="cat-shoes">أحذية</span>
                     </button>
                 </div>
             </div>
@@ -62,7 +62,7 @@
         <!-- Products Section -->
         <section class="products" id="products">
             <div class="container">
-                <h2 class="section-title">منتجاتنا المميزة</h2>
+                <h2 class="section-title" data-i18n="section-products">منتجاتنا المميزة</h2>
                 <div class="products-grid" id="productsGrid">
                     <!-- Products will be loaded here by JavaScript -->
                 </div>
@@ -75,23 +75,23 @@
                 <div class="features-grid">
                     <div class="feature-card">
                         <span class="feature-icon">🚚</span>
-                        <h3>شحن مجاني</h3>
-                        <p>للطلبات فوق 200 جنيه</p>
+                        <h3 data-i18n="feat-shipping-title">شحن مجاني</h3>
+                        <p data-i18n="feat-shipping-desc">للطلبات فوق 200 جنيه</p>
                     </div>
                     <div class="feature-card">
                         <span class="feature-icon">💳</span>
-                        <h3>دفع آمن</h3>
-                        <p>100% حماية لبياناتك</p>
+                        <h3 data-i18n="feat-secure-title">دفع آمن</h3>
+                        <p data-i18n="feat-secure-desc">100% حماية لبياناتك</p>
                     </div>
                     <div class="feature-card">
                         <span class="feature-icon">🔄</span>
-                        <h3>إرجاع سهل</h3>
-                        <p>خلال 30 يوم</p>
+                        <h3 data-i18n="feat-return-title">إرجاع سهل</h3>
+                        <p data-i18n="feat-return-desc">خلال 30 يوم</p>
                     </div>
                     <div class="feature-card">
                         <span class="feature-icon">🎧</span>
-                        <h3>دعم 24/7</h3>
-                        <p>خدمة عملاء متميزة</p>
+                        <h3 data-i18n="feat-support-title">دعم 24/7</h3>
+                        <p data-i18n="feat-support-desc">خدمة عملاء متميزة</p>
                     </div>
                 </div>
             </div>
@@ -101,8 +101,9 @@
         <section class="about" id="about">
             <div class="container">
                 <div class="about-content">
-                    <h2 class="section-title">من نحن</h2>
-                    <p>متجر ستايل هو وجهتك الأولى للتسوق الإلكتروني في المنطقة. نقدم لك أفضل المنتجات بأعلى جودة وأفضل
+                    <h2 class="section-title" data-i18n="section-about">من نحن</h2>
+                    <p data-i18n="about-p">متجر ستايل هو وجهتك الأولى للتسوق الإلكتروني في المنطقة. نقدم لك أفضل
+                        المنتجات بأعلى جودة وأفضل
                         الأسعار. نحرص على رضا عملائنا ونسعى دائماً لتقديم تجربة تسوق مميزة.</p>
                 </div>
             </div>
@@ -125,6 +126,8 @@
     <div id="toast-placeholder"></div>
 
     <!-- JavaScript Files -->
+    <script src="data/translations.js"></script>
+    <script src="UTILS/i18n.js"></script>
     <script src="UTILS/components.js"></script>
     <script src="data/products.js"></script>
     <script src="UTILS/storage.js"></script>

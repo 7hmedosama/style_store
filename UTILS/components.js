@@ -19,6 +19,7 @@ function loadComponent(elementId, file) {
 
 // Initialize app after all components are loaded
 function initializeApp() {
+    initI18n();
     renderProducts();
     updateCartUI();
     updateWishlistCount();

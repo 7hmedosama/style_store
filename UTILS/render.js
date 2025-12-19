@@ -23,18 +23,18 @@ function createProductCardHTML(product, options = {}) {
                 <span class="product-wishlist" onclick="event.stopPropagation(); ${wishlistAction}">${wishlistIcon}</span>
             </div>
             <div class="product-info">
-                <p class="product-category">${product.categoryAr}</p>
+                <p class="product-category">${currentLang === 'ar' ? product.categoryAr : t('cat-' + product.category)}</p>
                 <h3 class="product-name" onclick="openProductModal(${product.id})" style="cursor: pointer;">${product.name}</h3>
                 <div class="product-rating">
                     ${'⭐'.repeat(product.rating)}${'☆'.repeat(5 - product.rating)}
                 </div>
                 <div class="product-price">
-                    <span class="current-price">${product.price} جنيه</span>
-                    <span class="old-price">${product.oldPrice} جنيه</span>
+                    <span class="current-price">${product.price} ${currentLang === 'ar' ? 'جنيه' : 'EGP'}</span>
+                    <span class="old-price">${product.oldPrice} ${currentLang === 'ar' ? 'جنيه' : 'EGP'}</span>
                 </div>
                 <button class="add-to-cart" onclick="handleAddToCart(${product.id})">
                     <span>🛒</span>
-                    أضف للسلة
+                    ${t('btn-add-to-cart')}
                 </button>
             </div>
         </div>
