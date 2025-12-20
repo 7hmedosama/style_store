@@ -4,7 +4,7 @@
 let currentCategory = 'all';
 let searchQuery = '';
 
-// Render Products
+// Render Products (works with global products array)
 function renderProducts() {
     const productsGrid = document.getElementById('productsGrid');
     if (!productsGrid) return;
@@ -27,6 +27,30 @@ function renderProducts() {
     }
 
     productsGrid.innerHTML = filteredProducts.map(product => createProductCardHTML(product)).join('');
+}
+
+// Filter products by category (using API)
+async function filterByCategory(category) {
+    currentCategory = category;
+
+    // Optional: Use API filtering
+    // const filtered = category === 'all' 
+    //     ? await api.getAllProducts() 
+    //     : await api.getProductsByCategory(category);
+    // Then render...
+
+    renderProducts();
+}
+
+// Search products (using API)
+async function searchProducts(query) {
+    searchQuery = query.toLowerCase();
+
+    // Optional: Use API search
+    // const results = await api.searchProducts(query);
+    // Then render...
+
+    renderProducts();
 }
 
 // Clone categories for infinite scroll

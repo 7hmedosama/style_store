@@ -32,8 +32,18 @@ function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
+// Get product by ID from global products array
+function getProductById(productId) {
+    return products.find(p => p.id === productId);
+}
+
 function addToCart(productId) {
-    const product = products.find(p => p.id === productId);
+    const product = getProductById(productId);
+    if (!product) {
+        console.error('Product not found:', productId);
+        return null;
+    }
+
     const existingItem = cart.find(item => item.id === productId);
 
     if (existingItem) {

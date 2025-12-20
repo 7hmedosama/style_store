@@ -1,0 +1,19 @@
+{
+    "name": "style-store",
+    "version": "1.0.0",
+    "description": "متجر ستايل - متجر إلكتروني عربي",
+    "scripts": {
+        "api": "json-server --watch db.json --port 3000",
+        "api:cors": "json-server --watch db.json --port 3000 --middlewares ./cors-middleware.js"
+    },
+    "keywords": [
+        "ecommerce",
+        "arabic",
+        "store"
+    ],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "json-server": "^0.17.4"
+    }
+}
